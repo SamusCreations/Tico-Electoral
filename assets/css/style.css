@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    overflow-x: hidden;
+    background-color: white;
+    background-image: url(../img/Background.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 10vh 0;
+}
+
+div {
+    margin: 5vh 0;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a img {
+    width: 25px;
+    aspect-ratio: 1;
+}
+
+.submenu {
+    transform: translateY(-250%);
+    position: absolute;
+    background-color: #fff;
+    padding: 10px 10px 0 0;
+    margin-top: 240px;
+    margin-left: 125px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    transition: all 350ms;
+    filter: blur(5px);
+}
+
+.submenu a {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.submenu-trigger:hover+.submenu,
+.submenu:hover {
+    filter: blur(0px);
+    transform: translateY(0%);
+    transition: all 350ms;
+}
+
+.sr-only {
+    position: absolute;
+    left: -100%;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.encabezado {
+    align-items: center;
+    justify-content: center;
+    padding-left: 12.5%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabla-candidatos {
+    top: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px 12.5%;
+}
+
+.tabla-encuesta {
+    top: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px 12.5%;
+}
+
+.tabla-candidatos img {
+    height: 200px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+th,
+td {
+    padding-top: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabla-encuesta th,
+.tabla-encuesta td {
+    border: 1px solid black;
+}
+
+.tabla-encuesta img {
+    height: 100px;
+    width: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.links {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    list-style-position: inside;
+}
+
+.links li {
+    margin: max(5vh, 2rem) 0;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    padding: 25px 0;
+    background: white;
+    width: 100%;
+    color: grey;
+}
+
+
+/* mobile */
+@media (max-width: 700px) {
+    .navbar {
+        position: fixed;
+        z-index: 100;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        align-items: normal;
+
+        background: hsl(0, 0%, 100% / 0.1);
+        backdrop-filter: blur(1rem);
+        padding: min(30vh, 10rem) 2em;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .navbar a {
+        margin-top: 2em;
+    }
+
+    .navbar[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        width: 2rem;
+        top: 1.5rem;
+        right: 2rem;
+        border: 0;
+        aspect-ratio: 1;
+        background-repeat: no-repeat;
+        background-image: url(../svg/menu.svg);
+        background-color: transparent;
+        z-index: 999;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url(../svg/close.svg);
+    }
+
+    .submenu {
+        margin-top: 125px;
+        margin-left: 40px;
+    }
+
+    .submenu a {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .encabezado {
+        margin-top: 10%;
+    }
+
+    .tabla-candidatos img {
+        height: 100px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    .tabla-encuesta img {
+        height: 50px;
+        width: 100px;
+    }
+}

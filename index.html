@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/app.js"></script>
+    <script defer src="assets/js/nav.js"></script>
+    <title>Tico Electoral</title>
+</head>
+
+<body>
+
+    <header>
+
+        <a href="#" class="logo">Tico Electoral</a>
+
+        <button class="mobile-nav-toggle" aria-controls="navbar" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+
+        <nav class="navbar" data-visible="false">
+            <a href="#" class="active">Inicio</a>
+            <a href="#candidatos" class="submenu-trigger">Candidatos<img src="assets/svg/arrow-down.svg" alt="arrow-down"></a>
+            <div class="submenu">
+                <a href="#">Rodrigo</a>
+                <a href="#">José Maria</a>
+                <a href="#">Lineth</a>
+                <a href="#">Fabricio</a>
+            </div>
+            <a href="#">Encuestas</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="encabezado" id="candidatos">
+            <h1 class="hidden">Tico Electoral</h1>
+            <p class="hidden">Información confiable sobre las Elecciones de Costa Rica 2022</p>
+        </div>
+
+        <div class="tabla-candidatos">
+            <h1 class="hidden">Candidatos</h1>
+            <table class="hidden">
+                <tbody>
+                    <tr>
+                        <td><a href=""><img src="assets/img/Chaves.png" alt="Foto candidato 1"></a></td>
+                        <td><a href=""><img src="assets/img/Figueres.jpg" alt="Foto candidato 2"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img src="assets/img/Lineth.jpg" alt="Foto candidato 3"></a></td>
+                        <td><a href=""><img src="assets/img/Fabricio.png" alt="Foto candidato 4"></a></td>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tabla-encuesta">
+            <h1 class="hidden">Encuestas</h1>
+            <table class="hidden">
+                <thead>
+                    <tr>
+                        <th>Bandera</th>
+                        <th>Candidato</th>
+                        <th><a href="https://semanariouniversidad.com/pais/encuesta-ciep-ucr-figueres-y-saborio-disputan-primer-lugar-ante-acecho-de-fabricio-villalta-y-chaves/"
+                                target="_blank">Encuesta 1</a></th>
+                        <th><a href="https://semanariouniversidad.com/pais/encuesta-ciep-uce-confirma-punteros-y-31-de-indecisos-al-cierre-de-la-campana/"
+                                target="_blank">Encuesta 2</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="assets/img/PSD.png" alt=""></td>
+                        <td>Rodrigo Chaves Robles</td>
+                        <td>6.20%</td>
+                        <td>8.19%</td>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/img/PLN.png" alt=""></td>
+                        <td>José María Figueres Olsen</td>
+                        <td>17.20%</td>
+                        <td>17.01%</td>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/img/PUSC.png" alt=""></td>
+                        <td>Lineth Saborío Chaverri</td>
+                        <td>15.10%</td>
+                        <td>12.82%</td>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/img/PNR.png" alt=""></td>
+                        <td>Fabricio Alvarado Muñoz</td>
+                        <td>6.90%</td>
+                        <td>10.27%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="links">
+            <h1 class="hidden">Links</h1>
+            <ol class="hidden">
+                <li><a class="hidden" href="">Rodrigo Chaves Robles</a></li>
+                <li><a class="hidden" href="">José María Figueres Olsen</a></li>
+                <li><a class="hidden" href="">Lineth Saborío Chaverri</a></li>
+                <li><a class="hidden" href="">Fabricio Alvarado Muñoz</a></li>
+                <li><a class="hidden" href="https://www.tse.go.cr/dondevotar/" target="_blank">Lugares de votación</a>
+                </li>
+                <li><a class="hidden"
+                        href="https://semanariouniversidad.com/pais/encuesta-ciep-ucr-figueres-y-saborio-disputan-primer-lugar-ante-acecho-de-fabricio-villalta-y-chaves/"
+                        target="_blank">Encuesta
+                        1</a></li>
+                <li><a class="hidden"
+                        href="https://semanariouniversidad.com/pais/encuesta-ciep-uce-confirma-punteros-y-31-de-indecisos-al-cierre-de-la-campana/"
+                        target="_blank">Encuesta
+                        2</a></li>
+            </ol>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>© 2023 Samuel Romero. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
