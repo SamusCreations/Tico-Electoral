@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
 }
 
 header {
@@ -29,6 +30,7 @@ body {
     background-size: auto;
     background-position: center;
     background-attachment: fixed;
+    transition: all 1s;
 }
 
 main {
@@ -39,8 +41,38 @@ main {
     padding: 10vh 0;
 }
 
+h1 {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar a:hover,
+.tabla-encuesta a:hover {
+    color: blue;
+    transition: all .5s;
+}
+
 div {
     margin: 5vh 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+th,
+td {
+    padding-top: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
@@ -64,6 +96,7 @@ div {
     margin-left: 35px;
     display: flex;
     align-items: center;
+    transition: all 1s;
 }
 
 .navbar a img {
@@ -72,12 +105,12 @@ div {
 }
 
 .submenu {
-    transform: translateY(-250%);
+    transform: translateY(-400%);
     position: absolute;
     background-color: #fff;
     padding: 10px 10px 0 0;
-    margin-top: 240px;
-    margin-left: 125px;
+    margin-top: 200px;
+    margin-left: 120px;
     border-radius: 10%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
     transition: all 350ms;
@@ -93,6 +126,8 @@ div {
 
 .submenu-trigger:hover+.submenu,
 .submenu:hover {
+    margin-top: 250px;
+    margin-left: 130px;
     filter: blur(0px);
     transform: translateY(0%);
     transition: all 350ms;
@@ -117,11 +152,25 @@ div {
     padding-left: 12.5%;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
+.container {
+    display: flex;
+}
+
+.container .imagen {
+    flex: 1;
+    display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.container .descripcion {
+    flex: 1;
+}
+
+.imagen img {
+    aspect-ratio: 1;
+    width: 400px;
+    border-radius: 50%;
 }
 
 .tabla-candidatos {
@@ -144,20 +193,17 @@ table {
     flex-direction: column;
     text-align: left;
     padding: 10px 12.5%;
+    transition: all 1s;
+}
+
+.tabla-encuesta a {
+    transition: all 1s;
 }
 
 .tabla-candidatos img {
     height: 200px;
     aspect-ratio: 1;
     border-radius: 50%;
-}
-
-th,
-td {
-    padding-top: 8px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
 .tabla-encuesta th,
@@ -170,11 +216,6 @@ td {
     width: 200px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
 .links {
     align-items: center;
     justify-content: center;
@@ -184,6 +225,27 @@ a {
 
 .links li {
     margin: max(5vh, 2rem) 0;
+}
+
+.video,
+.audio,
+.youtube,
+.plan-gobierno,
+.pagina-oficial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+video,
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hidden {
@@ -262,6 +324,12 @@ footer {
         margin-bottom: 10px;
     }
 
+    .submenu-trigger:hover+.submenu,
+    .submenu:hover {
+        margin-top: 125px;
+        margin-left: 40px;
+    }
+
     main {
         width: 100%;
     }
@@ -281,5 +349,33 @@ footer {
     .tabla-encuesta img {
         height: 50px;
         width: 100px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container .imagen {
+        flex: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container .descripcion {
+        margin-top: 10px;
+        flex: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .imagen img {
+        width: 200px;
     }
 }
